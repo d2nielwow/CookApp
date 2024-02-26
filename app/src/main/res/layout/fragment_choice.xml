@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".presentation.ui.choice.ChoiceFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_back"
+        app:title="Cook Finder"
+        app:titleTextAppearance="@style/AppStyle.Typography.H1" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageChoice"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolBar" />
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/AppStyle.Typography.H2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Salmon in cream sauce"
+        android:textColor="@color/grey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageChoice" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/info"
+        android:layout_width="350dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/title">
+
+        <TextView
+            android:id="@+id/energy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="40dp"
+            android:textStyle="bold"
+            android:text="Energy" />
+
+        <View
+            android:background="@color/black"
+            android:layout_width="1dp"
+            android:id="@+id/firstView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/energy"
+            android:layout_marginStart="20dp"
+            android:layout_height="20dp"/>
+
+        <TextView
+            android:id="@+id/fat"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_marginEnd="12dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/firstView"
+            app:layout_constraintEnd_toStartOf="@+id/protein"
+            android:layout_height="wrap_content"
+            android:text="Fat" />
+
+        <View
+            android:background="@color/black"
+            android:layout_width="1dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/protein"
+            android:layout_height="20dp"/>
+
+        <TextView
+            android:id="@+id/protein"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
+            android:text="Protein" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/black"
+        android:id="@+id/horizontalView"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/preparation"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="347dp" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/preparation"
+        android:layout_width="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/info"
+        app:srcCompat="@drawable/im_topor" />
+
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="100dp"
+        android:background="@color/black"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalView"
+        app:layout_constraintLeft_toLeftOf="@+id/preparation"
+        app:layout_constraintRight_toRightOf="@+id/cooking"
+        tools:layout_editor_absoluteY="347dp" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/cooking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/info"
+        app:srcCompat="@drawable/im_soup" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/btn_start"
+        android:textColor="@color/grey"
+        android:textAllCaps="false"
+        android:text="Start cooking"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toBottomOf="@+id/preparation"/>
+
+
+    <com.daniel.cookmone.presentation.ui.view.TwoButton
+        android:id="@+id/customBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/numberLayout"
+        android:background="@drawable/custom_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/start" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/numberLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/customBtn"
+        app:layout_constraintBottom_toTopOf="@+id/btm_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/numberTv"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Namber of servings"
+        style="@style/AppStyle.Typography.H1"
+        android:textColor="@color/grey"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/descrep"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/btn_decrep"
+            android:textAlignment="center"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/number"
+            android:text="-"/>
+
+        <TextView
+            android:id="@+id/number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="116dp"
+            android:layout_marginEnd="10dp"
+            android:text="0"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@+id/crep"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/crep"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textStyle="bold"
+            android:background="@drawable/btn_increp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="+"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/btm_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/creme"
+        app:itemTextColor="@color/grey"
+        app:itemHorizontalTranslationEnabled="true"
+        app:itemIconTint="@color/grey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_menu" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

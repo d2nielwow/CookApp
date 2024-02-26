@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppStyle"/>
+
+    <style name="AppStyle.Typography">
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/text_main_black</item>
+    </style>
+
+    <style name="AppStyle.Typography.H1">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AppStyle.Typography.H2">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AppStyle.Typography.H3">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="AppStyle.Typography.T1">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="AppStyle.Typography.T2">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="AppStyle.Typography.T3">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="TwoButtonStyle">
+        <item name="tb_firstText">Ingredients</item>
+        <item name="tb_secondText">Method</item>
+        <item name="tb_textPaddingTop">6dp</item>
+        <item name="tb_textPaddingStart">8dp</item>
+        <item name="tb_textPaddingEnd">8dp</item>
+        <item name="tb_textPaddingBottom">6dp</item>
+        <item name="tb_textColor">@color/black</item>
+        <item name="tb_selectItem">first</item>
+        <item name="tb_activeBackground">@drawable/btn_active</item>
+    </style>
+</resources>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="twoButtonStyle" format="reference"/>
+
+    <declare-styleable name="TwoButton">
+        <attr name="tb_firstText" format="string"/>
+        <attr name="tb_secondText" format="string"/>
+        <attr name="tb_textPaddingTop" format="dimension"/>
+        <attr name="tb_textPaddingStart" format="dimension"/>
+        <attr name="tb_textPaddingEnd" format="dimension"/>
+        <attr name="tb_textPaddingBottom" format="dimension"/>
+        <attr name="tb_textColor" format="color"/>
+        <attr name="tb_activeBackground" format="reference"/>
+        <attr name="tb_selectItem" format="enum">
+            <enum name="first" value="0" />
+            <enum name="second" value="1"/>
+        </attr>
+        <attr name="tb_activeChangeDuration" format="integer"/>
+    </declare-styleable>
+</resources>

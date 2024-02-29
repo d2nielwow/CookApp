@@ -1,4 +1,4 @@
-package com.daniel.cookmone.data
+package com.daniel.cookmone.data.network
 
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

@@ -1,4 +1,4 @@
-package com.daniel.cookmone.data
+package com.daniel.cookmone.data.network
 
 import com.daniel.cookmone.domain.RecipeResponseItem
 import retrofit2.Call

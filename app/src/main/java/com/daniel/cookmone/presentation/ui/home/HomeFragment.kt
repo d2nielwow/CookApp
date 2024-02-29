@@ -27,7 +27,7 @@ class HomeFragment : Fragment(), HomeAdapter.OnActionListener {
 
     private lateinit var recycler: RecyclerView
 
-    private val adapter = HomeAdapter(this)
+    private val adapter by lazy { HomeAdapter(this) }
 
     private val viewModel: HomeViewModel by lazy {
         ViewModelProvider(this)[HomeViewModel::class.java]

@@ -2,7 +2,7 @@ package com.daniel.cookmone.presentation.ui.home
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.daniel.cookmone.data.RetrofitClient
+import com.daniel.cookmone.data.network.RetrofitClient
 import com.daniel.cookmone.domain.RecipeResponseItem
 import retrofit2.Call
 import retrofit2.Callback

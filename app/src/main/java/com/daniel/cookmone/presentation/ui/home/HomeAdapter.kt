@@ -11,33 +11,39 @@ import com.daniel.cookmone.MAIN
 import com.daniel.cookmone.R
 import com.daniel.cookmone.domain.RecipeResponseItem
 
-class HomeAdapter(private val listener: OnActionListener) : RecyclerView.Adapter<HomeAdapter.ViewHolder>() {
+class HomeAdapter(
+    private val listener: OnActionListener
+    ) : RecyclerView.Adapter<HomeAdapter.ViewHolder>() {
 
-    private val menuList = ArrayList<RecipeResponseItem>()
+    private val menuList: ArrayList<RecipeResponseItem> = arrayListOf()
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_rv_menu_second, parent, false)
 
         return ViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: HomeAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
        val item = menuList[position]
         holder.bind(item)
     }
 
-    override fun getItemCount(): Int = menuList.size
+    override fun getItemCount(): Int {
+        return menuList.size
+    }
 
     fun submitList(list: List<RecipeResponseItem>){
         menuList.clear()
         menuList.addAll(list)
+
+        notifyDataSetChanged()
     }
 
     inner class ViewHolder(view: View): RecyclerView.ViewHolder(view){
 
-        private val image = view.findViewById<ImageView>(R.id.imageMenuSecond)
-        private val title = view.findViewById<TextView>(R.id.titleMenuSecond)
+        private val image = view.findViewById<ImageView>(R.id.imageMenu)
+        private val title = view.findViewById<TextView>(R.id.titleMenu)
 
         fun bind(recipe: RecipeResponseItem){
             Glide.with(MAIN)

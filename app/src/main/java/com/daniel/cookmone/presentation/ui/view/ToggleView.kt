@@ -9,11 +9,11 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.ConstraintSet
 import androidx.core.content.res.getDrawableOrThrow
 import com.daniel.cookmone.R
-import com.daniel.cookmone.databinding.TwoButtonBinding
+import com.daniel.cookmone.databinding.ToogleViewBinding
 import kotlin.math.max
 
 
-class TwoButton  @JvmOverloads constructor(
+class ToggleView  @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet
 ) : ConstraintLayout(
@@ -21,10 +21,10 @@ class TwoButton  @JvmOverloads constructor(
     R.attr.twoButtonStyle
 ){
 
-    private val binding: TwoButtonBinding
+    private val binding: ToogleViewBinding
     private var listener: OnButtonChangeListener? = null
     private val transition: AutoTransition
-    private val state: TwoButtonState
+    private val state: ToggleState
 
     init {
         val array = context.obtainStyledAttributes(
@@ -34,7 +34,7 @@ class TwoButton  @JvmOverloads constructor(
             R.style.TwoButtonStyle
         )
 
-       state = TwoButtonState(
+       state = ToggleState(
            textPaddingTop = array.getDimension(R.styleable.TwoButton_tb_textPaddingTop, 0f),
            textPaddingStart = array.getDimension(R.styleable.TwoButton_tb_textPaddingStart, 0f),
            textPaddingEnd = array.getDimension(R.styleable.TwoButton_tb_textPaddingEnd, 0f),
@@ -49,7 +49,7 @@ class TwoButton  @JvmOverloads constructor(
        )
 
         val inflater = LayoutInflater.from(context)
-        binding = TwoButtonBinding.inflate(inflater, this, true)
+        binding = ToogleViewBinding.inflate(inflater, this, true)
 
         transition = AutoTransition().apply {
             duration = state.activeChangeDuration
@@ -86,7 +86,7 @@ class TwoButton  @JvmOverloads constructor(
             firstText.setOnClickListener{
                 if (!state.selectItemId.isFirst()){
                     applyChangeBias(0f)
-                    state.selectItemId = TwoButtonState.SelectedItemMode.FIRST
+                    state.selectItemId = ToggleState.SelectedItemMode.FIRST
                     listener?.onChange(0)
                 }
             }
@@ -94,7 +94,7 @@ class TwoButton  @JvmOverloads constructor(
             secondText.setOnClickListener{
                 if (!state.selectItemId.isSecond()){
                     applyChangeBias(1f)
-                    state.selectItemId = TwoButtonState.SelectedItemMode.SECOND
+                    state.selectItemId = ToggleState.SelectedItemMode.SECOND
                     listener?.onChange(1)
                 }
             }

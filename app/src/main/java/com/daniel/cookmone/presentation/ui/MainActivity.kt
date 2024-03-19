@@ -2,8 +2,8 @@ package com.daniel.cookmone.presentation.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.daniel.cookmone.MAIN
-import com.daniel.cookmone.presentation.ui.home.HomeFragment
+import com.daniel.cookmone.presentation.utils.MAIN
+import com.daniel.cookmone.presentation.ui.recipe.RecipeFragment
 import com.daniel.cookmone.R
 
 class MainActivity : AppCompatActivity() {
@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         MAIN = this
 
         supportFragmentManager.beginTransaction()
-            .add(R.id.container, HomeFragment.newInstance())
+            .add(R.id.container, RecipeFragment.newInstance())
             .addToBackStack(null)
             .commit()
     }

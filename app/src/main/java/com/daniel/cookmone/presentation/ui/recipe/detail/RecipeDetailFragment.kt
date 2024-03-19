@@ -1,25 +1,22 @@
-package com.daniel.cookmone.presentation.ui.choice
+package com.daniel.cookmone.presentation.ui.recipe.detail
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
-import com.daniel.cookmone.MAIN
 import com.daniel.cookmone.R
 import com.daniel.cookmone.domain.RecipeResponseItem
 
 
-class ChoiceFragment : Fragment(R.layout.fragment_choice) {
+class RecipeDetailFragment : Fragment(R.layout.fragment_recipe_detail) {
 
     companion object {
 
         private const val MENU_ARG = "menu"
 
-        fun newInstance(recipes: RecipeResponseItem): Fragment = ChoiceFragment().apply {
+        fun newInstance(recipes: RecipeResponseItem): Fragment = RecipeDetailFragment().apply {
             arguments = Bundle().apply {
                 putSerializable(MENU_ARG, recipes)
             }

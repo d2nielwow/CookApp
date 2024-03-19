@@ -1,4 +1,4 @@
-package com.daniel.cookmone.presentation.ui.home
+package com.daniel.cookmone.presentation.ui.recipe
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,19 +7,19 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.daniel.cookmone.MAIN
+import com.daniel.cookmone.presentation.utils.MAIN
 import com.daniel.cookmone.R
 import com.daniel.cookmone.domain.RecipeResponseItem
 
-class HomeAdapter(
+class RecipeAdapter(
     private val listener: OnActionListener
-    ) : RecyclerView.Adapter<HomeAdapter.ViewHolder>() {
+    ) : RecyclerView.Adapter<RecipeAdapter.ViewHolder>() {
 
     private val menuList: ArrayList<RecipeResponseItem> = arrayListOf()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_rv_menu_second, parent, false)
+            .inflate(R.layout.item_rv_menu, parent, false)
 
         return ViewHolder(view)
     }

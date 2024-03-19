@@ -2,7 +2,7 @@ package com.daniel.cookmone.presentation.ui.view
 
 import android.graphics.drawable.Drawable
 
-internal class TwoButtonState (
+internal class ToggleState (
     val textPaddingTop: Float,
     val textPaddingStart: Float,
     val textPaddingEnd: Float,

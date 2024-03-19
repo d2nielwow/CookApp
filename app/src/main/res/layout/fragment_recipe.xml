@@ -34,19 +34,6 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_menu"
-        android:orientation="horizontal"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit"
-        tools:listitem="@layout/item_rv_menu" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_menu_second"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginHorizontal="20dp"
@@ -55,9 +42,9 @@
         android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rv_menu"
+        app:layout_constraintTop_toBottomOf="@+id/edit"
         app:layout_constraintBottom_toTopOf="@+id/btm_bar"
-        tools:listitem="@layout/item_rv_menu_second" />
+        tools:listitem="@layout/item_rv_menu" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/btm_bar"
